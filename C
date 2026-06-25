@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frjda - Collezione Completi Donna</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 1px solid #eaeaea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #111;
+        }
+
+        header p {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Griglia Prodotti */
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            position: relative;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-body h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #e67e22;
+            font-size: 1.3rem;
+        }
+
+        /* Sezione Modulo D'Ordine */
+        .order-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+        }
+
+        .order-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        /* Bottoni */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            color: white;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebd57;
+        }
+
+        .btn-email {
+            background-color: #007BFF;
+        }
+
+        .btn-email:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Frjda</h1>
+        <p>Scegli il tuo outfit ideale e ordina in un click</p>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="gallery-title">I Nostri Completi Esclusivi</h2>
+        
+        <!-- Griglia che riprende i prodotti visti in image.png -->
+        <div class="grid">
+            <div class="card">
+                <img src="link_immagine_1.jpg" alt="Completo Blu Elettrico">
+                <div class="card-body">
+                    <h3>Completo Blu Elettrico & Fantasia</h3>
+                    <p class="price">€ 39,90</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="link_immagine_2.jpg" alt="Completo Nero e Fiori">
+                <div class="card-body">
+                    <h3>Completo Nero & Pantalone Floreale</h3>
+                    <p class="price">€ 39,90</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="link_immagine_3.jpg" alt="Completo Verde Acido">
+                <div class="card-body">
+                    <h3>Completo Verde Acido & Geometrico</h3>
+                    <p class="price">€ 39,90</p>
+                </div>
+            </div>
+            
+            <!-- Puoi duplicare questo blocco ".card" per aggiungere tutti e 9 i modelli di image.png -->
+        </div>
+
+        <!-- Sezione Modulo Ordine -->
+        <div class="order-section" id="ordine">
+            <h2>Modulo d'Ordine Rapido</h2>
+            <form id="orderForm">
+                
+                <div class="form-group">
+                    <label for="name">Nome e Cognome</label>
+                    <input type="text" id="name" required placeholder="Es. Maria Rossi">
+                </div>
+
+                <div class="form-group">
+                    <label for="product">Seleziona il Modello</label>
+                    <select id="product" required>
+                        <option value="">-- Scegli il modello --</option>
+                        <option value="Blu Elettrico">Completo Blu Elettrico & Fantasia</option>
+                        <option value="Nero Fiori">Completo Nero & Pantalone Floreale</option>
+                        <option value="Verde Acido">Completo Verde Acido & Geometrico</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="size">Taglia</label>
+                    <select id="size" required>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Indirizzo di Spedizione (Via, Città, CAP)</label>
+                    <textarea id="address" rows="3" required placeholder="Es. Via Roma 10, Milano, 20100"></textarea>
+                </div>
+
+                <div class="btn-container">
+                    <!-- Invia su WhatsApp -->
+                    <button type="button" class="btn btn-whatsapp" onclick="sendWhatsApp()">
+                        Invia Ordine su WhatsApp
+                    </button>
+                    
+                    <!-- Invia via E-mail -->
+                    <button type="button" class="btn btn-email" onclick="sendEmail()">
+                        Invia Ordine via E-mail
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Frjda Store. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        function getFormData() {
+            const name = document.getElementById('name').value;
+            const product = document.getElementById('product').value;
+            const size = document.getElementById('size').value;
+            const address = document.getElementById('address').value;
+
+            if(!name || !product || !size || !address) {
+                alert("Per favore, compila tutti i campi prima di inviare.");
+                return null;
+            }
+
+            return { name, product, size, address };
+        }
+
+        function sendWhatsApp() {
+            const data = getFormData();
+            if(!data) return;
+
+            // CONFIGURA QUI IL TUO NUMERO (Prefisso internazionale + numero senza spazi)
+            const phoneNumber = "393331234567"; 
+            
+            const message = `Nuovo Ordine da Frjda:\n\n` +
+                            `👤 Nome: ${data.name}\n` +
+                            `👗 Modello: ${data.product}\n` +
+                            `📏 Taglia: ${data.size}\n` +
+                            `📍 Indirizzo: ${data.address}`;
+
+            const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        function sendEmail() {
+            const data = getFormData();
+            if(!data) return;
+
+            // CONFIGURA QUI LA TUA EMAIL
+            const emailTo = "LA_TUA_EMAIL@esempio.com"; 
+            
+            const subject = `Nuovo Ordine Frjda - ${data.name}`;
+            const body = `Dettagli dell'ordine:\n\n` +
+                         `Nome: ${data.name}\n` +
+                         `Modello: ${data.product}\n` +
+                         `Taglia: ${data.size}\n` +
+                         `Indirizzo di Spedizione: ${data.address}`;
+
+            const url = `mailto:${emailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
